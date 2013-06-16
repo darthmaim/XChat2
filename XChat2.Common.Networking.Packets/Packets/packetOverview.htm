@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>XChat2 - Packets</title>
+	</head>
+    <style type="text/css">
+        body 
+        {
+            background-color: #152F48;
+            color: White;
+        }
+        h1
+        {
+            color: #C17634;
+        }
+        h2 
+        {
+            border: 3px ridge #808080;
+            padding: 3px;
+        }
+        td 
+        {
+            padding: 3px;
+        }
+        th 
+        {
+            background-color: #C17634;
+        }
+        div.toc 
+        {
+            border: 1px outset #808080;
+            padding: 2px;
+            display:inline-block;
+        }
+        ul.toc 
+        {
+            margin: 0px;
+            padding: 3px 20px  3px 20px;
+            background-color: #C17634;
+            border: 1px inset #808080;
+        }
+        .toc a 
+        {
+            color: #152F48;
+        }
+        a[href="#toc"] 
+        {
+            color: Gray;
+            padding: 0px;
+            text-decoration: none;
+            float: right;
+            position: relative;
+            top: -3px;
+        }
+    </style>
+	<body>
+	    <h1>XChat2 - Packets</h1>
+
+        <h2 id="toc">Table of Content</h2>
+        <div class="toc">
+        <ul class="toc">
+            <li><a href="#0x00">0x00 - KeepAlive</a></li>
+            <li><a href="#0x01">0x01 - Handshake</a></li>
+            <li><a href="#0x02">0x02 - HandshakeResponse</a></li>
+            <li><a href="#0x03">0x03 - GetAccountInformation</a></li>
+            <li><a href="#0x04">0x04 - GetAccountInformationResponse</a></li>
+        </ul></div>
+        
+        <h2 id="0x00">0x00 - KeepAlive<a href="#toc">&uarr;</a></h2>
+        <p>KeepAlive Packet to recognize connection interrupts</p>
+        <table border="1">
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        </table>
+
+        <h2 id="0x01">0x01 - Handshake<a href="#toc">&uarr;</a></h2>
+        <p>Client to Server</p>
+        <table border="1">
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        <tr><td>string</td><td><b>Userame</b></td><td>The name of the user, who tries to authenticate</td></tr>
+        <tr><td>byte[16]</td><td><b>PasswordHash</b></td><td>The MD5-Hash of the user, who tries to authenticate</td></tr>
+        </table>
+
+        <h2 id="0x02">0x02 - HandshakeResponse<a href="#toc">&uarr;</a></h2>
+        <p>Server to Client</p>
+        <table border="1">
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        <tr><td>bool</td><td><b>Success</b></td><td>Authentication Successfull</td></tr>
+        </table>
+        
+        <h2 id="0x03">0x03 - GetAccountInformation<a href="#toc">&uarr;</a></h2>
+        <p>Client to Server</p>
+        <table border="1">
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        </table>
+
+        <h2 id="0x04">0x04 - GetAccountInformationResponse<a href="#toc">&uarr;</a></h2>
+        <p>Server to Client</p>
+        <table border="1">
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        <tr><td>string</td><td><b>Userame</b></td><td>The name of the user, who tries to authenticate</td></tr>
+        </table>
+	</body>
+</html>

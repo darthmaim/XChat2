@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B1AEA95-303E-4B8F-88D5-F91FE7CD92F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XChat2Client</RootNamespace>
+    <AssemblyName>XChat2Client</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>xchat2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XChat2.Client.Controls">
+      <HintPath>..\XChat2.Client.Controls\obj\Debug\XChat2.Client.Controls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatDialog.Designer.cs">
+      <DependentUpon>ChatDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactListForm.Designer.cs">
+      <DependentUpon>ContactListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomingContactRequestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomingContactRequestDialog.Designer.cs">
+      <DependentUpon>IncomingContactRequestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionDialog.Designer.cs">
+      <DependentUpon>OptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\ChatOptionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionPages\ChatOptionPage.Designer.cs">
+      <DependentUpon>ChatOptionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPages\IOptionPage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchContactForm.Designer.cs">
+      <DependentUpon>SearchContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabbedChatDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabbedChatDialog.Designer.cs">
+      <DependentUpon>TabbedChatDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChatDialog.resx">
+      <DependentUpon>ChatDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactListForm.resx">
+      <DependentUpon>ContactListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomingContactRequestDialog.resx">
+      <DependentUpon>IncomingContactRequestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionDialog.resx">
+      <DependentUpon>OptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPages\ChatOptionPage.resx">
+      <DependentUpon>ChatOptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabbedChatDialog.resx">
+      <DependentUpon>TabbedChatDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XChat.Common.Configuration\XChat2.Common.Configuration.csproj">
+      <Project>{1DC156C9-064E-4E97-87DF-DB57ECFA6AA9}</Project>
+      <Name>XChat2.Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Client.Communication\XChat2.Client.Communication.csproj">
+      <Project>{577C0E6B-6723-4227-A819-1A9713E84FA1}</Project>
+      <Name>XChat2.Client.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Client.Data\XChat2.Client.Data.csproj">
+      <Project>{FD498708-06CB-48F1-9F54-333256696961}</Project>
+      <Name>XChat2.Client.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Client.Interop\XChat2.Client.Interop.csproj">
+      <Project>{235F9280-10E4-4DF2-9EF6-F724A8857C37}</Project>
+      <Name>XChat2.Client.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Client.Resources\XChat2.Client.Resources.csproj">
+      <Project>{22DAE21E-29AD-4682-959E-93908CAC80FB}</Project>
+      <Name>XChat2.Client.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Client.Update\XChat2.Client.Update.csproj">
+      <Project>{229BEE92-67CC-42C5-B353-DF0478E0A699}</Project>
+      <Name>XChat2.Client.Update</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Collections\XChat2.Common.Collections.csproj">
+      <Project>{8BA27C4A-C310-44BE-A25F-E9C11420DF48}</Project>
+      <Name>XChat2.Common.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Compression\XChat2.Common.Compression.csproj">
+      <Project>{8F7ABDD0-EC35-452A-8C77-12788D84F0A0}</Project>
+      <Name>XChat2.Common.Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Helper\XChat2.Common.Helper.csproj">
+      <Project>{9FF577DC-65DA-4F1F-9382-E43D0C29CC44}</Project>
+      <Name>XChat2.Common.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Networking.Packets\XChat2.Common.Networking.Packets.csproj">
+      <Project>{F699C6AD-DB9E-4BD1-B7D9-1710E37B92FA}</Project>
+      <Name>XChat2.Common.Networking.Packets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Network\XChat2.Common.Networking.csproj">
+      <Project>{16433540-B2E7-4F0D-8AD6-EE395786AEB3}</Project>
+      <Name>XChat2.Common.Networking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xchat2.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB377CDA-4E18-4493-B46F-DC5878A7C238}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XChat2.Common.Networking.P2P</RootNamespace>
+    <AssemblyName>XChat2.Common.Networking.P2P</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="P2PPacketCreator.cs" />
+    <Compile Include="KnownP2PPackets.cs" />
+    <Compile Include="Client\P2PConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\HolePunchClient.cs" />
+    <Compile Include="Server\HolePunchServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XChat2.Client.Communication\XChat2.Client.Communication.csproj">
+      <Project>{577C0E6B-6723-4227-A819-1A9713E84FA1}</Project>
+      <Name>XChat2.Client.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Exceptions\XChat2.Common.Exceptions.csproj">
+      <Project>{3014EF68-09DE-4382-BB7D-B6203951B46F}</Project>
+      <Name>XChat2.Common.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Helper\XChat2.Common.Helper.csproj">
+      <Project>{9FF577DC-65DA-4F1F-9382-E43D0C29CC44}</Project>
+      <Name>XChat2.Common.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XChat2.Common.Network\XChat2.Common.Networking.csproj">
+      <Project>{16433540-B2E7-4F0D-8AD6-EE395786AEB3}</Project>
+      <Name>XChat2.Common.Networking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
